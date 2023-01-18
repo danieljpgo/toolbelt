@@ -1,25 +1,33 @@
-import { Button } from "ui";
 import Head from "next/head";
+import Image from "next/image";
+// import { Button } from "ui";
 
 export default function Web() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <>
       <Head>
-        <title>Web - Turborepo Example</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Toolbelt</title>
+        <link rel="icon" href="favicon.ico" />
       </Head>
-
-      <main className="mx-auto w-auto px-4 pt-16 pb-8 sm:pt-24 lg:px-8">
-        <h1 className="mx-auto max-w-5xl text-center text-6xl font-extrabold leading-[1.1] tracking-tighter text-white sm:text-7xl lg:text-8xl xl:text-8xl">
-          Web <br className="hidden lg:block" />
-          <span className="inline-block bg-gradient-to-r from-red-500 to-blue-500 bg-clip-text text-transparent">
-            Turborepo Example
-          </span>{" "}
-        </h1>
-        <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
-          <Button />
+      <main className="min-h-screen relative grid place-items-center overflow-hidden bg-gray-50">
+        <Image
+          priority
+          src="/beams.jpeg"
+          alt="background light beams"
+          className="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
+          width="1308"
+          height="900"
+        />
+        <div className="absolute inset-0 bg-[url(/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        <div className="relative">
+          <h1 className="text-6xl font-extrabold leading-[1.1] tracking-tighter text-white sm:text-7xl lg:text-8xl xl:text-8xl bg-gradient-to-r from-pink-300 to-blue-400 bg-clip-text text-transparent">
+            Toolbelt
+          </h1>
         </div>
       </main>
-    </div>
+    </>
   );
 }
+
+/* <div className="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 rounded-lg sm:rounded-xl sm:px-10"> */
+/* </div> */
