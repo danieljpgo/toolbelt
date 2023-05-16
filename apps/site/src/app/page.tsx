@@ -4,7 +4,14 @@ export default function Web() {
   return (
     <main className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
       {/* [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] */}
-      <div className="absolute h-full w-full bg-[url('/grid.svg')] bg-center"></div>
+      <div className="absolute h-full w-full bg-[url('/grid.svg')] bg-center">
+        <div className="flex h-40 items-center justify-center">
+          <Heading as="h1" size="6xl" weight="bold">
+            Toolbelt
+          </Heading>
+        </div>
+      </div>
+
       <div className="container relative grid gap-10 bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10">
         <HeadingSection />
         <TextSection />

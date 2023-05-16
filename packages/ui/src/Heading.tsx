@@ -1,5 +1,80 @@
 import { cn } from "../lib/tailwindcss";
 
+type HeadingProps = {
+  children: string | React.ReactNode;
+  /**
+   * Defines which tag should be rendered.
+   * @default as: 'h2'.
+   */
+  as?: keyof typeof tags;
+  /**
+   * Defines which size should be used.
+   * @default size: 'base'.
+   */
+  size?: keyof typeof sizes;
+  /**
+   * Defines which weight should be used.
+   * @default weight: 'normal'.
+   */
+  weight?: keyof typeof weights;
+  /**
+   * Defines which color should be used.
+   * @default color: 'dark'.
+   */
+  color?: keyof typeof colors;
+  /**
+   * Defines which tracking should be used.
+   * @default tracking: 'normal'.
+   */
+  tracking?: keyof typeof trackings;
+  // /**
+  //  * Defines which leading should be used.
+  //  * @default leading: ''.
+  //  */
+  // leading?: keyof typeof leadings;
+};
+
+/**
+ * `<Heading/>` component.
+ *
+ * Renders a heading with customizable tag, size, weight, tracking, and color.
+ *
+ * @example
+ * ```tsx
+ * return (
+ *  <Heading as="h2" size="4xl" weight="semibold" tracking="tight" color="dark">
+ *    Lorem
+ *  </Heading>
+ * );
+ * ```
+ */
+export function Heading(props: HeadingProps) {
+  const {
+    children,
+    as: tag = "h2",
+    size = "base",
+    weight = "normal",
+    color = "dark",
+    tracking = "normal",
+    // leading,
+  } = props;
+  const Tag = tag;
+
+  return (
+    <Tag
+      className={cn(
+        sizes[size],
+        weights[weight],
+        colors[color],
+        trackings[tracking],
+        // leading ? leadings[leading] : "",
+      )}
+    >
+      {children}
+    </Tag>
+  );
+}
+
 const tags = {
   h1: "h1",
   h2: "h2",
@@ -35,16 +110,6 @@ const trackings = {
   widest: "tracking-widest",
 } as const;
 
-// @TODO keep?
-const leadings = {
-  none: "leading-none",
-  tight: "leading-tight",
-  snug: "leading-snug",
-  normal: "leading-normal",
-  relaxed: "leading-relaxed",
-  loose: "leading-loose",
-};
-
 const weights = {
   normal: "font-normal",
   medium: "font-medium",
@@ -54,39 +119,12 @@ const weights = {
   black: "font-black",
 } as const;
 
-type HeadingProps = {
-  children: string | React.ReactNode;
-  as?: keyof typeof tags;
-  weight?: keyof typeof weights;
-  size?: keyof typeof sizes;
-  color?: keyof typeof colors;
-  tracking?: keyof typeof trackings;
-  leading?: keyof typeof leadings;
-};
-
-export function Heading(props: HeadingProps) {
-  const {
-    children,
-    size = "base",
-    as: tag = "h2",
-    color = "dark",
-    weight = "normal",
-    tracking = "normal",
-    leading,
-  } = props;
-  const Tag = tag;
-
-  return (
-    <Tag
-      className={cn(
-        sizes[size],
-        weights[weight],
-        colors[color],
-        trackings[tracking],
-        leading ? leadings[leading] : "",
-      )}
-    >
-      {children}
-    </Tag>
-  );
-}
+// // @TODO keep?
+// const leadings = {
+//   none: "leading-none",
+//   tight: "leading-tight",
+//   snug: "leading-snug",
+//   normal: "leading-normal",
+//   relaxed: "leading-relaxed",
+//   loose: "leading-loose",
+// };
