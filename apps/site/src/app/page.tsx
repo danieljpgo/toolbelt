@@ -32,22 +32,22 @@ function HeadingSection() {
       <hr />
       <div className="flex gap-10">
         <div>
-          <small>size: base</small>
-          <Heading size="base">Lorem</Heading>
-          <small>size: lg</small>
-          <Heading size="lg">Lorem</Heading>
-          <small>size: xl</small>
-          <Heading size="xl">Lorem</Heading>
-          <small>size: 2xl</small>
-          <Heading size="2xl">Lorem</Heading>
-          <small>size: 3xl</small>
-          <Heading size="3xl">Lorem</Heading>
-          <small>size: 4xl</small>
-          <Heading size="4xl">Lorem</Heading>
-          <small>size: 5xl</small>
-          <Heading size="5xl">Lorem</Heading>
           <small>size: 6xl</small>
           <Heading size="6xl">Lorem</Heading>
+          <small>size: 5xl</small>
+          <Heading size="5xl">Lorem</Heading>
+          <small>size: 4xl</small>
+          <Heading size="4xl">Lorem</Heading>
+          <small>size: 3xl</small>
+          <Heading size="3xl">Lorem</Heading>
+          <small>size: 2xl</small>
+          <Heading size="2xl">Lorem</Heading>
+          <small>size: xl</small>
+          <Heading size="xl">Lorem</Heading>
+          <small>size: lg</small>
+          <Heading size="lg">Lorem</Heading>
+          <small>size: base</small>
+          <Heading size="base">Lorem</Heading>
         </div>
         <div>
           <small>weight: normal</small>
@@ -99,32 +99,6 @@ function HeadingSection() {
           </Heading>
           <small>tracking: widest</small>
           <Heading tracking="widest" size="xl">
-            Lorem
-          </Heading>
-        </div>
-        <div>
-          <small>leading: none</small>
-          <Heading leading="none" size="xl">
-            Lorem
-          </Heading>
-          <small>leading: tight</small>
-          <Heading leading="tight" size="xl">
-            Lorem
-          </Heading>
-          <small>leading: snug</small>
-          <Heading leading="snug" size="xl">
-            Lorem
-          </Heading>
-          <small>leading: normal</small>
-          <Heading leading="normal" size="xl">
-            Lorem
-          </Heading>
-          <small>leading: relaxed</small>
-          <Heading leading="relaxed" size="xl">
-            Lorem
-          </Heading>
-          <small>leading: loose</small>
-          <Heading leading="loose" size="xl">
             Lorem
           </Heading>
         </div>

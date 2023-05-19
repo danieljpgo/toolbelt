@@ -27,11 +27,6 @@ type HeadingProps = {
    * @default tracking: 'normal'.
    */
   tracking?: keyof typeof trackings;
-  // /**
-  //  * Defines which leading should be used.
-  //  * @default leading: ''.
-  //  */
-  // leading?: keyof typeof leadings;
 };
 
 /**
@@ -56,20 +51,11 @@ export function Heading(props: HeadingProps) {
     weight = "normal",
     color = "dark",
     tracking = "normal",
-    // leading,
   } = props;
   const Tag = tag;
 
   return (
-    <Tag
-      className={cn(
-        sizes[size],
-        weights[weight],
-        colors[color],
-        trackings[tracking],
-        // leading ? leadings[leading] : "",
-      )}
-    >
+    <Tag className={cn(sizes[size], weights[weight], colors[color], trackings[tracking])}>
       {children}
     </Tag>
   );
@@ -119,12 +105,4 @@ const weights = {
   black: "font-black",
 } as const;
 
-// // @TODO keep?
-// const leadings = {
-//   none: "leading-none",
-//   tight: "leading-tight",
-//   snug: "leading-snug",
-//   normal: "leading-normal",
-//   relaxed: "leading-relaxed",
-//   loose: "leading-loose",
-// };
+// @TODO add the leading?
