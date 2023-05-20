@@ -24,7 +24,6 @@ type HeadingProps = {
   color?: keyof typeof colors;
   /**
    * Defines which tracking should be used.
-   * @default tracking: 'normal'.
    */
   tracking?: keyof typeof trackings;
 };
@@ -50,12 +49,19 @@ export function Heading(props: HeadingProps) {
     size = "base",
     weight = "normal",
     color = "dark",
-    tracking = "normal",
+    tracking,
   } = props;
   const Tag = tag;
 
   return (
-    <Tag className={cn(sizes[size], weights[weight], colors[color], trackings[tracking])}>
+    <Tag
+      className={cn(
+        sizes[size],
+        weights[weight],
+        colors[color],
+        tracking && trackings[tracking],
+      )}
+    >
       {children}
     </Tag>
   );

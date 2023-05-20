@@ -1,4 +1,4 @@
-import { Heading } from "ui";
+import { Heading, Text } from "ui";
 
 export default function Web() {
   return (
@@ -32,86 +32,131 @@ function HeadingSection() {
       <hr />
       <div className="flex gap-10">
         <div>
-          <small>size: 6xl</small>
+          <Text as="small" size="xs">
+            size: 6xl
+          </Text>
           <Heading size="6xl">Lorem</Heading>
-          <small>size: 5xl</small>
+          <Text as="small" size="xs">
+            size: 5xl
+          </Text>
           <Heading size="5xl">Lorem</Heading>
-          <small>size: 4xl</small>
+          <Text as="small" size="xs">
+            size: 4xl
+          </Text>
           <Heading size="4xl">Lorem</Heading>
-          <small>size: 3xl</small>
+          <Text as="small" size="xs">
+            size: 3xl
+          </Text>
           <Heading size="3xl">Lorem</Heading>
-          <small>size: 2xl</small>
+          <Text as="small" size="xs">
+            size: 2xl
+          </Text>
           <Heading size="2xl">Lorem</Heading>
-          <small>size: xl</small>
+          <Text as="small" size="xs">
+            size: xl
+          </Text>
           <Heading size="xl">Lorem</Heading>
-          <small>size: lg</small>
+          <Text as="small" size="xs">
+            size: lg
+          </Text>
           <Heading size="lg">Lorem</Heading>
-          <small>size: base</small>
+          <Text as="small" size="xs">
+            size: base
+          </Text>
           <Heading size="base">Lorem</Heading>
         </div>
         <div>
-          <small>weight: normal</small>
+          <Text as="small" size="xs">
+            weight: normal
+          </Text>
           <Heading weight="normal" size="xl">
             Lorem
           </Heading>
-          <small>weight: medium</small>
+          <Text as="small" size="xs">
+            weight: medium
+          </Text>
           <Heading weight="medium" size="xl">
             Lorem
           </Heading>
-          <small>weight: semibold</small>
+          <Text as="small" size="xs">
+            weight: semibold
+          </Text>
           <Heading weight="semibold" size="xl">
             Lorem
           </Heading>
-          <small>weight: bold</small>
+          <Text as="small" size="xs">
+            weight: bold
+          </Text>
           <Heading weight="bold" size="xl">
             Lorem
           </Heading>
-          <small>weight: extrabold</small>
+          <Text as="small" size="xs">
+            weight: extrabold
+          </Text>
           <Heading weight="extrabold" size="xl">
             Lorem
           </Heading>
-          <small>weight: black</small>
+          <Text as="small" size="xs">
+            weight: black
+          </Text>
           <Heading weight="black" size="xl">
             Lorem
           </Heading>
         </div>
-
         <div>
-          <small>tracking: tighter</small>
+          <Text as="small" size="xs">
+            tracking: tighter
+          </Text>
           <Heading tracking="tighter" size="xl">
             Lorem
           </Heading>
-          <small>tracking: tight</small>
+          <Text as="small" size="xs">
+            tracking: tight
+          </Text>
           <Heading tracking="tight" size="xl">
             Lorem
           </Heading>
-          <small>tracking: normal</small>
+          <Text as="small" size="xs">
+            tracking: normal
+          </Text>
           <Heading tracking="normal" size="xl">
             Lorem
           </Heading>
-          <small>tracking: wide</small>
+          <Text as="small" size="xs">
+            tracking: wide
+          </Text>
           <Heading tracking="wide" size="xl">
             Lorem
           </Heading>
-          <small>tracking: wider</small>
+          <Text as="small" size="xs">
+            tracking: wider
+          </Text>
           <Heading tracking="wider" size="xl">
             Lorem
           </Heading>
-          <small>tracking: widest</small>
+          <Text as="small" size="xs">
+            tracking: widest
+          </Text>
           <Heading tracking="widest" size="xl">
             Lorem
           </Heading>
         </div>
         <div>
-          <small>color: base</small>
+          <Text as="small" size="xs">
+            color: base
+          </Text>
           <Heading color="base" size="xl">
             Lorem
           </Heading>
-          <small>color: dark</small>
+          <Text as="small" size="xs">
+            color: dark
+          </Text>
           <Heading color="dark" size="xl">
             Lorem
           </Heading>
-          <small>color: darker</small>
+          <Text as="small" size="xs">
+            color: darker
+          </Text>
           <Heading color="darker" size="xl">
             Lorem
           </Heading>
@@ -128,7 +173,156 @@ function TextSection() {
         Text
       </Heading>
       <hr />
-      <div className="flex gap-10">@TODO</div>
+      <div className="flex gap-10">
+        <div>
+          <Text as="small" size="xs">
+            size: 2xl
+          </Text>
+          <Text size="2xl">Lorem</Text>
+          <Text as="small" size="xs">
+            size: xl
+          </Text>
+          <Text size="xl">Lorem</Text>
+          <Text as="small" size="xs">
+            size: lg
+          </Text>
+          <Text size="lg">Lorem</Text>
+          <Text as="small" size="xs">
+            size: base
+          </Text>
+          <Text size="base">Lorem</Text>
+          <Text as="small" size="xs">
+            size: sm
+          </Text>
+          <Text size="sm">Lorem</Text>
+          <Text as="small" size="xs">
+            size: xs
+          </Text>
+          <Text size="xs">Lorem</Text>
+          <Text as="small" size="xs">
+            size: 2xs
+          </Text>
+          <Text size="2xs">Lorem</Text>
+        </div>
+        <div>
+          <Text as="small" size="xs">
+            weight: thin
+          </Text>
+          <Text weight="thin">Lorem</Text>
+          <Text as="small" size="xs">
+            weight: extra-light
+          </Text>
+          <Text weight="extra-light">Lorem</Text>
+          <Text as="small" size="xs">
+            weight: light
+          </Text>
+          <Text weight="light">Lorem</Text>
+          <Text as="small" size="xs">
+            weight: normal
+          </Text>
+          <Text weight="normal">Lorem</Text>
+          <Text as="small" size="xs">
+            weight: normal
+          </Text>
+          <Text weight="normal">Lorem</Text>
+          <Text as="small" size="xs">
+            weight: medium
+          </Text>
+          <Text weight="medium">Lorem</Text>
+          <Text as="small" size="xs">
+            weight: semibold
+          </Text>
+          <Text weight="semibold">Lorem</Text>
+          <Text as="small" size="xs">
+            weight: bold
+          </Text>
+          <Text weight="bold">Lorem</Text>
+          <Text as="small" size="xs">
+            weight: extrabold
+          </Text>
+          <Text weight="extrabold">Lorem</Text>
+          <Text as="small" size="xs">
+            weight: black
+          </Text>
+          <Text weight="black">Lorem</Text>
+        </div>
+        <div>
+          <Text as="small" size="xs">
+            tracking: tighter
+          </Text>
+          <Text tracking="tighter" size="xl">
+            Lorem
+          </Text>
+          <Text as="small" size="xs">
+            tracking: tight
+          </Text>
+          <Text tracking="tight" size="xl">
+            Lorem
+          </Text>
+          <Text as="small" size="xs">
+            tracking: normal
+          </Text>
+          <Text tracking="normal" size="xl">
+            Lorem
+          </Text>
+          <Text as="small" size="xs">
+            tracking: wide
+          </Text>
+          <Text tracking="wide" size="xl">
+            Lorem
+          </Text>
+          <Text as="small" size="xs">
+            tracking: wider
+          </Text>
+          <Text tracking="wider" size="xl">
+            Lorem
+          </Text>
+          <Text as="small" size="xs">
+            tracking: widest
+          </Text>
+          <Text tracking="widest" size="xl">
+            Lorem
+          </Text>
+        </div>
+        <div>
+          <Text as="small" size="xs">
+            color: lighter
+          </Text>
+          <Text color="lighter">Lorem</Text>
+          <Text as="small" size="xs">
+            color: light
+          </Text>
+          <Text color="light">Lorem</Text>
+          <Text as="small" size="xs">
+            color: base
+          </Text>
+          <Text color="base">Lorem</Text>
+          <Text as="small" size="xs">
+            color: dark
+          </Text>
+          <Text color="dark">Lorem</Text>
+          <Text as="small" size="xs">
+            color: darker
+          </Text>
+          <Text color="darker">Lorem</Text>
+        </div>
+        <div>
+          <Text as="small" size="xs">
+            decoration: line-through
+          </Text>
+          <Text decoration="line-through">Lorem</Text>
+          <Text as="small" size="xs">
+            decoration: underline
+          </Text>
+          <Text decoration="underline">Lorem</Text>
+        </div>
+        <div>
+          <Text as="small" size="xs">
+            style: italic
+          </Text>
+          <Text style="italic">Lorem</Text>
+        </div>
+      </div>
     </section>
   );
 }
