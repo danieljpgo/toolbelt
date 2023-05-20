@@ -103,7 +103,6 @@ function HeadingSection() {
             Lorem
           </Heading>
         </div>
-
         <div>
           <Text as="small" size="xs">
             tracking: tighter
@@ -246,6 +245,82 @@ function TextSection() {
             weight: black
           </Text>
           <Text weight="black">Lorem</Text>
+        </div>
+        <div>
+          <Text as="small" size="xs">
+            tracking: tighter
+          </Text>
+          <Text tracking="tighter" size="xl">
+            Lorem
+          </Text>
+          <Text as="small" size="xs">
+            tracking: tight
+          </Text>
+          <Text tracking="tight" size="xl">
+            Lorem
+          </Text>
+          <Text as="small" size="xs">
+            tracking: normal
+          </Text>
+          <Text tracking="normal" size="xl">
+            Lorem
+          </Text>
+          <Text as="small" size="xs">
+            tracking: wide
+          </Text>
+          <Text tracking="wide" size="xl">
+            Lorem
+          </Text>
+          <Text as="small" size="xs">
+            tracking: wider
+          </Text>
+          <Text tracking="wider" size="xl">
+            Lorem
+          </Text>
+          <Text as="small" size="xs">
+            tracking: widest
+          </Text>
+          <Text tracking="widest" size="xl">
+            Lorem
+          </Text>
+        </div>
+        <div>
+          <Text as="small" size="xs">
+            color: lighter
+          </Text>
+          <Text color="lighter">Lorem</Text>
+          <Text as="small" size="xs">
+            color: light
+          </Text>
+          <Text color="light">Lorem</Text>
+          <Text as="small" size="xs">
+            color: base
+          </Text>
+          <Text color="base">Lorem</Text>
+          <Text as="small" size="xs">
+            color: dark
+          </Text>
+          <Text color="dark">Lorem</Text>
+          <Text as="small" size="xs">
+            color: darker
+          </Text>
+          <Text color="darker">Lorem</Text>
+        </div>
+        <div>
+          <Text as="small" size="xs">
+            decoration: line-through
+          </Text>
+          <Text decoration="line-through">Lorem</Text>
+          <Text as="small" size="xs">
+            decoration: underline
+          </Text>
+          <Text decoration="underline">Lorem</Text>
+        </div>
+        <div>
+          <Text as="small" size="xs">
+            style: italic
+          </Text>
+          <Text style="italic">Lorem</Text>
         </div>
       </div>
     </section>
