@@ -1,30 +1,24 @@
 import { cn } from "../lib/tailwindcss";
 
-const sizes = {
-  sm: "h-5 w-5",
-  md: "h-10 w-10",
-  lg: "h-20 w-20",
-};
-
 type SpinnerProps = {
-  variant?: "contrast";
+  variant?: keyof typeof variants;
   size?: keyof typeof sizes;
 };
 
 export function Spinner(props: SpinnerProps) {
-  const { variant, size = "sm" } = props;
+  const { variant = "base", size = "md" } = props;
 
   return (
     <svg
       role="status"
-      className={cn(
-        "inline h-5 w-5 animate-spin text-transparent",
-        variant === "contrast" ? "fill-white" : "fill-gray-800",
-        sizes[size],
-      )}
       viewBox="0 0 100 101"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={cn(
+        "inline animate-spin text-transparent",
+        variants[variant],
+        sizes[size],
+      )}
     >
       <path
         d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
@@ -37,3 +31,23 @@ export function Spinner(props: SpinnerProps) {
     </svg>
   );
 }
+
+const sizes = {
+  sm: "h-3 w-3",
+  md: "h-4 w-4",
+  lg: "h-6 w-6",
+  xl: "h-8 w-8",
+} as const;
+
+const variants = {
+  contrast: "fill-white",
+  base: "fill-gray-700",
+} as const;
+
+// const colors = {
+//   lighter: "text-gray-500",
+//   light: "text-gray-600",
+//   base: "text-gray-700",
+//   dark: "text-gray-800",
+//   darker: "text-gray-900",
+// } as const;

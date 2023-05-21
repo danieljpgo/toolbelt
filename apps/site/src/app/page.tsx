@@ -3,9 +3,9 @@ import { Button, Heading, Text, Spinner } from "ui";
 export default function Web() {
   return (
     <main className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-      {/* [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] */}
-      <div className="absolute h-full w-full bg-[url('/grid.svg')] bg-center">
-        <div className="flex h-40 items-center justify-center">
+      {/*  */}
+      <div className="[mask-image:linear-gradient(0deg,white 90%,rgba(255,255,255,0))] absolute h-full w-full bg-[url('/grid.svg')] bg-center">
+        <div className="relative z-10 flex h-40 items-center justify-center">
           <Heading as="h1" size="6xl" weight="bold">
             Toolbelt
           </Heading>
@@ -435,6 +435,10 @@ function SpinnerSection() {
       <hr />
       <div className="flex gap-10">
         <div className="flex flex-col gap-1">
+          <Text as="small" size="xs">
+            size: xl
+          </Text>
+          <Spinner size="xl" />
           <Text as="small" size="xs">
             size: lg
           </Text>
