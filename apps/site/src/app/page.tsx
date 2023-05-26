@@ -1,11 +1,11 @@
-import { Heading, Text } from "ui";
+import { Button, Heading, Text, Spinner } from "ui";
 
 export default function Web() {
   return (
     <main className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-      {/* [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] */}
-      <div className="absolute h-full w-full bg-[url('/grid.svg')] bg-center">
-        <div className="flex h-40 items-center justify-center">
+      {/*  */}
+      <div className="[mask-image:linear-gradient(0deg,white 90%,rgba(255,255,255,0))] absolute h-full w-full bg-[url('/grid.svg')] bg-center">
+        <div className="relative z-10 flex h-40 items-center justify-center">
           <Heading as="h1" size="6xl" weight="bold">
             Toolbelt
           </Heading>
@@ -16,8 +16,9 @@ export default function Web() {
         <HeadingSection />
         <TextSection />
         <ButtonSection />
-        <IconButtonSection />
-        <ToggleButtonSection />
+        <SpinnerSection />
+        {/* <IconButtonSection />
+        <ToggleButtonSection /> */}
       </div>
     </main>
   );
@@ -334,34 +335,151 @@ function ButtonSection() {
         Button
       </Heading>
       <hr />
-      <div className="flex gap-10">@TODO</div>
+      <div className="flex gap-10 ">
+        <div className="flex flex-col gap-1">
+          <Text as="small" size="xs">
+            size: lg
+          </Text>
+          <Button size="lg">Lorem</Button>
+          <Text as="small" size="xs">
+            size: md
+          </Text>
+          <Button size="md">Lorem</Button>
+          <Text as="small" size="xs">
+            size: sm
+          </Text>
+          <Button size="sm">Lorem</Button>
+        </div>
+        <div className="flex flex-col gap-1">
+          <Text as="small" size="xs">
+            variant: primary
+          </Text>
+          <Button variant="primary">Lorem</Button>
+          <Text as="small" size="xs">
+            variant: second
+          </Text>
+          <Button variant="secondary">Lorem</Button>
+
+          <Text as="small" size="xs">
+            variant: ghost
+          </Text>
+          <Button variant="ghost">Lorem</Button>
+          <Text as="small" size="xs">
+            variant: destructive
+          </Text>
+          <Button variant="destructive">Lorem</Button>
+        </div>
+        <div className="flex flex-col gap-1">
+          <Text as="small" size="xs">
+            variant: disabled - primary
+          </Text>
+          <Button variant="primary" disabled>
+            Lorem
+          </Button>
+          <Text as="small" size="xs">
+            variant: disabled - second
+          </Text>
+          <Button variant="secondary" disabled>
+            Lorem
+          </Button>
+          <Text as="small" size="xs">
+            variant: disabled - ghost
+          </Text>
+          <Button variant="ghost" disabled>
+            Lorem
+          </Button>
+          <Text as="small" size="xs">
+            variant: disabled - destructive
+          </Text>
+          <Button variant="destructive" disabled>
+            Lorem
+          </Button>
+        </div>
+        <div className="flex flex-col gap-1">
+          <Text as="small" size="xs">
+            variant: loading - primary
+          </Text>
+          <Button variant="primary" loading>
+            Lorem
+          </Button>
+          <Text as="small" size="xs">
+            variant: loading - second
+          </Text>
+          <Button variant="secondary" loading>
+            Lorem
+          </Button>
+          <Text as="small" size="xs">
+            variant: loading - ghost
+          </Text>
+          <Button variant="ghost" loading>
+            Lorem
+          </Button>
+          <Text as="small" size="xs">
+            variant: loading - destructive
+          </Text>
+          <Button variant="destructive" loading>
+            Lorem
+          </Button>
+        </div>
+      </div>
     </section>
   );
 }
 
-function IconButtonSection() {
+function SpinnerSection() {
   return (
     <section className="grid gap-4">
       <Heading as="h2" size="4xl" weight="semibold" tracking="tight" color="dark">
-        IconButton
+        Spinner
       </Heading>
       <hr />
-      <div className="flex gap-10">@TODO</div>
+      <div className="flex gap-10">
+        <div className="flex flex-col gap-1">
+          <Text as="small" size="xs">
+            size: xl
+          </Text>
+          <Spinner size="xl" />
+          <Text as="small" size="xs">
+            size: lg
+          </Text>
+          <Spinner size="lg" />
+          <Text as="small" size="xs">
+            size: md
+          </Text>
+          <Spinner size="md" />
+          <Text as="small" size="xs">
+            size: sm
+          </Text>
+          <Spinner size="sm" />
+        </div>
+      </div>
     </section>
   );
 }
 
-function ToggleButtonSection() {
-  return (
-    <section className="grid gap-4">
-      <Heading as="h2" size="4xl" weight="semibold" tracking="tight" color="dark">
-        ToggleButton
-      </Heading>
-      <hr />
-      <div className="flex gap-10">@TODO</div>
-    </section>
-  );
-}
+// function IconButtonSection() {
+//   return (
+//     <section className="grid gap-4">
+//       <Heading as="h2" size="4xl" weight="semibold" tracking="tight" color="dark">
+//         IconButton
+//       </Heading>
+//       <hr />
+//       <div className="flex gap-10">@TODO</div>
+//     </section>
+//   );
+// }
+
+// function ToggleButtonSection() {
+//   return (
+//     <section className="grid gap-4">
+//       <Heading as="h2" size="4xl" weight="semibold" tracking="tight" color="dark">
+//         ToggleButton
+//       </Heading>
+//       <hr />
+//       <div className="flex gap-10">@TODO</div>
+//     </section>
+//   );
+// }
 
 /* <div className="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 rounded-lg sm:rounded-xl sm:px-10"> */
 /* </div> */
